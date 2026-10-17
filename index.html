@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>慈濟大學 經營管理學系 | Department of Business Management, Tzu Chi University</title>
+
+    <!-- Font Awesome Icons & Professional Corporate Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           PROFESSIONAL EXECUTIVE BUSINESS THEME & TYPOGRAPHY
+           ========================================================================== */
+        :root {
+            --navy-primary: #0a2540;    /* Deep Oxford Navy */
+            --navy-dark: #061727;       /* Dark Executive Slate */
+            --blue-accent: #1e3a8a;     /* Professional Corporate Blue */
+            --blue-interactive: #2563eb;
+            --gold-accent: #b45309;     /* Subtle Academic Gold Detail */
+            --text-heading: #0f172a;    /* High Contrast Dark */
+            --text-body: #334155;       /* Reader Friendly Charcoal */
+            --text-muted: #64748b;
+            --bg-ground: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-alt: #f1f5f9;
+            --border-color: #cbd5e1;
+            --border-dark: #334155;
+            --radius: 4px;              /* Sharpened Corporate Edges */
+            --shadow-subtle: 0 4px 12px rgba(10, 37, 64, 0.05);
+            --shadow-card: 0 10px 20px rgba(10, 37, 64, 0.08);
+            --transition: all 0.25s ease-in-out;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { 
+            scroll-behavior: smooth; 
+            font-family: 'Noto Sans TC', sans-serif; 
+            color: var(--text-body); 
+            background-color: var(--bg-ground); 
+            line-height: 1.7; 
+        }
+
+        /* Academic Executive Headings */
+        h1, h2, h3, h4, .serif-font { 
+            font-family: 'Noto Serif TC', serif; 
+            color: var(--text-heading); 
+            letter-spacing: -0.01em; 
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img, video { max-width: 100%; display: block; border-radius: var(--radius); }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 80px 0; }
+
+        /* TOP EXECUTIVE HEADER */
+        .top-bar {
+            background-color: var(--navy-dark);
+            color: #94a3b8;
+            font-size: 0.85rem;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .top-bar-content { display: flex; justify-content: space-between; align-items: center; }
+        .top-info span { margin-right: 24px; font-weight: 400; }
+        .top-info i { color: #38bdf8; margin-right: 6px; }
+        .top-links a { color: #cbd5e1; font-weight: 500; }
+        .top-links a:hover { color: #ffffff; text-decoration: underline; }
+
+        /* NAVBAR */
+        header.navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--bg-surface);
+            border-bottom: 2px solid var(--navy-primary);
+            box-shadow: var(--shadow-subtle);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 85px; }
+        .brand-logo { display: flex; align-items: center; gap: 16px; }
+        .logo-symbol {
+            width: 46px;
+            height: 46px;
+            background-color: var(--navy-primary);
+            color: var(--bg-surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            border-radius: var(--radius);
+        }
+        .logo-text h1 { font-size: 1.3rem; font-weight: 700; color: var(--navy-primary); line-height: 1.2; }
+        .logo-text p { font-size: 0.75rem; color: var(--text-muted); font-family: 'Cinzel', serif; letter-spacing: 0.08em; }
+
+        .nav-menu { display: flex; align-items: center; gap: 28px; }
+        .nav-link { font-size: 0.95rem; font-weight: 500; color: var(--text-heading); padding: 6px 0; border-bottom: 2px solid transparent; }
+        .nav-link:hover, .nav-link.active { color: var(--navy-primary); border-bottom-color: var(--navy-primary); }
+        .nav-link.btn-nav {
+            background-color: var(--navy-primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--navy-primary);
+        }
+        .nav-link.btn-nav:hover { background-color: var(--blue-accent); color: white; }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 100%);
+            color: white;
+            padding: 90px 0;
+            border-bottom: 4px solid var(--gold-accent);
+        }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #93c5fd;
+            border-left: 3px solid var(--gold-accent);
+            padding-left: 10px;
+            margin-bottom: 16px;
+        }
+        .hero-title { font-size: 2.8rem; font-weight: 900; color: #ffffff; line-height: 1.25; margin-bottom: 20px; }
+        .hero-desc { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 35px; line-height: 1.8; font-weight: 300; }
+        .hero-actions { display: flex; gap: 16px; }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-primary { background-color: var(--blue-interactive); color: white; border: none; }
+        .btn-primary:hover { background-color: #1d4ed8; }
+        .btn-outline { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4); }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+        /* SECTION HEADER */
+        .section-header { text-align: center; max-width: 750px; margin: 0 auto 50px; }
+        .section-subtitle {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--blue-accent);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .section-title { font-size: 2.2rem; font-weight: 700; color: var(--navy-primary); position: relative; padding-bottom: 14px; }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--navy-primary);
+        }
+
+        /* ACADEMIC FEATURES GRID */
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .card-feature {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            transition: var(--transition);
+        }
+        .card-feature:hover { border-color: var(--navy-primary); box-shadow: var(--shadow-card); transform: translateY(-4px); }
+        .card-icon {
+            font-size: 1.8rem;
+            color: var(--navy-primary);
+            margin-bottom: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--bg-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+        }
+        .card-feature h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; color: var(--navy-primary); }
+        .card-feature p { font-size: 0.92rem; color: var(--text-body); }
+
+        /* FACILITIES & LABS */
+        .bg-alt { background-color: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card-facility {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+        }
+        .card-facility img { width: 100%; height: 210px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .card-facility-body { padding: 24px; }
+        .card-facility-body h3 { font-size: 1.2rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 10px; }
+        .card-facility-body p { font-size: 0.92rem; color: var(--text-body); margin-bottom: 16px; }
+
+        /* MEDIA RESERVED SECTION (Requirement IV) */
+        .video-container-box {
+            background-color: var(--navy-primary);
+            color: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            margin-top: 40px;
+            border-left: 5px solid var(--gold-accent);
+        }
+        .video-container-box h3 { color: white; font-size: 1.5rem; margin-bottom: 10px; }
+        .video-wrapper { margin-top: 24px; background-color: black; border-radius: var(--radius); overflow: hidden; }
+        .video-wrapper video { width: 100%; max-height: 480px; }
+
+        /* AI COLLABORATION LOG (+10% Bonus Requirement) */
+        .ai-log-box {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--navy-primary);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-top: 60px;
+        }
+        .ai-log-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .ai-log-header h4 { font-size: 1.1rem; color: var(--navy-primary); font-weight: 700; }
+        .ai-log-content { font-size: 0.9rem; color: var(--text-body); line-height: 1.7; }
+
+        /* FOOTER */
+        footer { background-color: var(--navy-dark); color: #94a3b8; padding: 60px 0 30px; font-size: 0.9rem; border-top: 3px solid var(--navy-primary); }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 40px; margin-bottom: 40px; }
+        .footer-brand h2 { color: white; font-size: 1.25rem; margin-bottom: 12px; }
+        .footer-col h4 { color: white; font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; font-family: 'Noto Sans TC', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a:hover { color: white; text-decoration: underline; }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; text-align: center; font-size: 0.85rem; }
+
+        @media (max-width: 868px) {
+            .hero-grid, .footer-grid { grid-template-columns: 1fr; }
+            .nav-menu { display: none; }
+            .top-bar { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP EXECUTIVE BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-building-columns"></i> 慈濟大學 管理學院</span>
+                <span><i class="fa-solid fa-location-dot"></i> 970 花蓮市介仁街67號</span>
+                <span><i class="fa-solid fa-phone"></i> (03) 857-2677 分機 31682</span>
+            </div>
+            <div class="top-links">
+                <a href="studentworks.html"><i class="fa-solid fa-graduation-cap"></i> 學生成果展示專區 (studentworks.html) →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR WITH CROSS-PAGE NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-symbol"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="logo-text">
+                    <h1>慈濟大學 經營管理學系</h1>
+                    <p>DEPARTMENT OF BUSINESS MANAGEMENT</p>
+                </div>
+            </a>
+
+            <!-- Cross-Page Nav Links (Requirement III) -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">系所簡介</a>
+                <a href="#vision" class="nav-link">辦學願景</a>
+                <a href="#facilities" class="nav-link">實務場域</a>
+                <a href="#media" class="nav-link">影音簡介</a>
+                <a href="studentworks.html" class="nav-link btn-nav"><i class="fa-solid fa-folder-open"></i> 學生作品展示</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO EXECUTIVE BANNER -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="hero-badge">ACADEMIC EXCELLENCE & SUSTAINABILITY</span>
+                <h1 class="hero-title">培育具備誠正誠信與數位戰略思考之商業領袖</h1>
+                <p class="hero-desc">
+                    慈濟大學經營管理學系致力於高階企業管理教育，融會智慧零售、ESG永續治理與哈佛個案實務教學，培育符合國際企業期待之專業經理人。
+                </p>
+                <div class="hero-actions">
+                    <a href="studentworks.html" class="btn btn-primary">
+                        <i class="fa-solid fa-award"></i> 檢視學生專題研究成果
+                    </a>
+                    <a href="#facilities" class="btn btn-outline">
+                        <i class="fa-solid fa-network-wired"></i> 專業特色實驗室
+                    </a>
+                </div>
+            </div>
+            <div>
+                <!-- Relative path hero image (Requirement III) -->
+                <img src="graph/hero_banner.jpg" alt="慈濟大學經營管理學系" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80';">
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMIC VISION & CORE DOMAINS -->
+    <section class="section-padding" id="vision">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CORE COMPETENCIES</span>
+                <h2 class="section-title">核心學術發展領域</h2>
+            </div>
+
+            <div class="grid-4">
+                <div class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>ESG與永續管理</h3>
+                    <p>引導學生掌握碳資產管理、企業社會責任與永續發展策略，深化綠色經濟之分析思維。</p>
+                </div>
+
+                <div class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>智慧新零售與行銷</h3>
+                    <p>結合消費行為數據分析、品牌策略與智慧門市營運實務，培育全通路整合行銷人才。</p>
+                </div>
+
+                <div class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
+                    <h3>組織策略與高階領導</h3>
+                    <p>透過高階個案分析與組織動態研討，訓練學子跨部門溝通、決策分析與危機處理能力。</p>
+                </div>
+
+                <div class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>商業智慧與數據決策</h3>
+                    <p>引進數據挖掘、營運資訊系統與商業預測分析模型，奠定數據驅動之決策基礎。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIALIZED LABORATORIES & FACILITIES (Relative paths required) -->
+    <section class="section-padding bg-alt" id="facilities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PRACTICAL INFRASTRUCTURE</span>
+                <h2 class="section-title">教學研究與體驗場域</h2>
+            </div>
+
+            <div class="grid-3">
+                <!-- Facility 1 (Relative Path) -->
+                <div class="card-facility">
+                    <img src="graph/lab_case.jpg" alt="個案教學研討室" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80';">
+                    <div class="card-facility-body">
+                        <h3>高階決策個案研討室</h3>
+                        <p>比照國際商學院標準建置之梯形研討空間，提供翻轉教育、團體談判與口語表達演練。</p>
+                    </div>
+                </div>
+
+                <!-- Facility 2 (Relative Path) -->
+                <div class="card-facility">
+                    <img src="graph/lab_coffee.jpg" alt="知足咖啡館實習教室" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80';">
+                    <div class="card-facility-body">
+                        <h3>經營管理實習教室 (知足咖啡館)</h3>
+                        <p>提供完整商業服務流程、外場服務品質管理與營運財務管理之實境操作場域。</p>
+                    </div>
+                </div>
+
+                <!-- Facility 3 (Relative Path) -->
+                <div class="card-facility">
+                    <img src="graph/lab_smartstore.jpg" alt="智慧商店實驗室" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&q=80';">
+                    <div class="card-facility-body">
+                        <h3>智慧商店實驗室</h3>
+                        <p>建置無人零售與新零售技術環境，讓學生深入體驗資訊系統與消費行為數據採集。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESERVED SPACE FOR DEPARTMENT PROMOTIONAL VIDEO (Requirement IV) -->
+            <div class="video-container-box" id="media">
+                <h3><i class="fa-solid fa-circle-play"></i> 系所介紹與教學環境影片</h3>
+                <p style="font-size: 0.95rem; opacity: 0.9;">預留之系所宣傳短片播放空間（使用相對路徑 graph/dept_video.mp4 載入）：</p>
+                
+                <div class="video-wrapper">
+                    <video controls poster="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80">
+                        <source src="graph/dept_video.mp4" type="video/mp4">
+                        您的瀏覽器不支援 HTML5 影片播放。請確認影片檔案已存放在 graph/dept_video.mp4。
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+<!-- CAREER & INDUSTRY PARTNERSHIPS SECTION -->
+<section class="section-padding bg-alt" id="career-pathways">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">CAREER & INDUSTRY PARTNERSHIPS</span>
+            <h2 class="section-title">產學合作與職涯發展地圖</h2>
+        </div>
+
+        <div class="grid-3">
+            <!-- Card 1: Corporate Internships -->
+            <div class="card-facility" style="padding: 28px 24px; border-top: 3px solid var(--navy-primary);">
+                <div style="font-size: 1.8rem; color: var(--navy-primary); margin-bottom: 12px;">
+                    <i class="fa-solid fa-handshake-simple"></i>
+                </div>
+                <h3>多元企業實習網絡</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 16px;">與跨國企業及本土知名機構建立深厚實習合作關係，協助學子畢業前累積實務經驗。</p>
+                <div style="border-top: 1px solid var(--border-color); padding-top: 12px;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">核心合作單位：</span>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">大愛感恩科技</span>
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">靜思書軒</span>
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">金融與流通企業</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Graduate Employment Domains -->
+            <div class="card-facility" style="padding: 28px 24px; border-top: 3px solid var(--navy-primary);">
+                <div style="font-size: 1.8rem; color: var(--navy-primary); margin-bottom: 12px;">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h3>畢業生多元就業進路</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 16px;">畢業生廣泛任職於科技業、金融機構、零售流通及永續顧問機構，發揮跨域管理解決能力。</p>
+                <div style="border-top: 1px solid var(--border-color); padding-top: 12px;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">主要進路領域：</span>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">數據分析師</span>
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">品牌行銷企劃</span>
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">ESG永續管理師</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Global Dual Degree & Exchange -->
+            <div class="card-facility" style="padding: 28px 24px; border-top: 3px solid var(--navy-primary);">
+                <div style="font-size: 1.8rem; color: var(--navy-primary); margin-bottom: 12px;">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3>國際交流與雙聯學制</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 16px;">積極鏈結海外姐妹校，提供海外暑期研修、交換學生及國際雙聯學位申請管道。</p>
+                <div style="border-top: 1px solid var(--border-color); padding-top: 12px;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">國際化特色：</span>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">雙語授課模組</span>
+                        <span style="background: var(--bg-ground); border: 1px solid var(--border-color); font-size: 0.8rem; padding: 3px 8px; color: var(--text-body);">姐妹校交換研修</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>慈濟大學 經營管理學系</h2>
+                    <p style="font-size: 0.85rem; line-height: 1.6;">
+                        Department of Business Management, Tzu Chi University<br>
+                        地址：970 花蓮市介仁街67號<br>
+                        電話：(03) 857-2677 分機 31682 | 電子郵件：ss62@gms.tcu.edu.tw
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>快速導覽</h4>
+                    <ul>
+                        <li><a href="index.html">系所首頁</a></li>
+                        <li><a href="#vision">辦學願景</a></li>
+                        <li><a href="#facilities">實務場域</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>學生成果</h4>
+                    <ul>
+                        <li><a href="studentworks.html">畢業專題展示</a></li>
+                        <li><a href="studentworks.html#videos">簡報影片專區</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>個人資料窗口</h4>
+                    <p style="font-size: 0.85rem; line-height: 1.6;">
+                        林珍如 主任<br>
+                        電話：03-857-2677 #33126<br>
+                        信箱：lih5374@gms.tcu.edu.tw
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 慈濟大學經營管理學系 版權所有 | Tzu Chi University Department of Business Management
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生學習成果展區 | 慈濟大學經營管理學系</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-primary: #0a2540;
+            --navy-dark: #061727;
+            --blue-accent: #1e3a8a;
+            --gold-accent: #b45309;
+            --text-heading: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --bg-ground: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-alt: #f1f5f9;
+            --border-color: #cbd5e1;
+            --radius: 4px;
+            --shadow-subtle: 0 4px 12px rgba(10, 37, 64, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-ground); color: var(--text-body); line-height: 1.7; }
+        h1, h2, h3, h4 { font-family: 'Noto Serif TC', serif; color: var(--text-heading); }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 70px 0; }
+
+        /* HEADER & NAVBAR */
+        header.navbar { position: sticky; top: 0; z-index: 1000; background: var(--bg-surface); border-bottom: 2px solid var(--navy-primary); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 85px; }
+        .brand-logo { display: flex; align-items: center; gap: 16px; }
+        .logo-symbol { width: 46px; height: 46px; background-color: var(--navy-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; border-radius: var(--radius); }
+        .logo-text h1 { font-size: 1.25rem; font-weight: 700; color: var(--navy-primary); }
+        .logo-text p { font-size: 0.75rem; color: var(--text-muted); font-family: 'Cinzel', serif; }
+
+        .nav-menu { display: flex; align-items: center; gap: 24px; }
+        .nav-link { font-size: 0.95rem; font-weight: 600; color: var(--text-heading); padding: 6px 12px; border-radius: var(--radius); }
+        .nav-link:hover { color: var(--navy-primary); background-color: var(--bg-alt); }
+        .nav-link.active { background-color: var(--navy-primary); color: white; }
+
+        /* PAGE TITLE BANNER */
+        .page-banner {
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-primary) 100%);
+            color: white;
+            padding: 60px 0;
+            border-bottom: 3px solid var(--gold-accent);
+        }
+        .page-banner h1 { font-size: 2.3rem; color: white; margin-bottom: 8px; }
+        .page-banner p { font-size: 1.05rem; opacity: 0.9; font-weight: 300; }
+
+        /* WORKS GRID */
+        .works-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card-work { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-subtle); }
+        .card-work img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid var(--border-color); }
+        .card-work-content { padding: 24px; }
+        .work-tag { display: inline-block; background-color: var(--bg-alt); border: 1px solid var(--border-color); color: var(--navy-primary); font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 2px; margin-bottom: 12px; }
+        .card-work h3 { font-size: 1.2rem; font-weight: 700; color: var(--navy-primary); margin-bottom: 8px; }
+        .card-work .authors { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 500; }
+
+        /* RESERVED STUDENT VIDEO SECTION (Requirement IV) */
+        .student-video-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--navy-primary);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-top: 50px;
+        }
+        .student-video-box h3 { font-size: 1.4rem; color: var(--navy-primary); margin-bottom: 8px; }
+        .student-video-box video { width: 100%; max-height: 420px; margin-top: 20px; background-color: black; border-radius: var(--radius); }
+
+        footer { background-color: var(--navy-dark); color: #94a3b8; padding: 40px 0; text-align: center; margin-top: 80px; font-size: 0.88rem; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR WITH HYPERLINK BACK TO HOMEPAGE (index.html) -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-symbol"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="logo-text">
+                    <h1>慈濟大學 經營管理學系</h1>
+                    <p>STUDENT ACADEMIC PORTFOLIO</p>
+                </div>
+            </a>
+
+            <!-- Cross-Page Link to index.html -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> 返回系所首頁</a>
+                <a href="#capstones" class="nav-link">畢業專題</a>
+                <a href="#videos" class="nav-link">成果簡報影片</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER BANNER -->
+    <div class="page-banner">
+        <div class="container">
+            <h1><i class="fa-solid fa-graduation-cap"></i> 學生學術成果與專題研究專區</h1>
+            <p>展示本系學生於永續 ESG 治理、智慧零售數據分析與企業轉型實務之專題論文成果</p>
+        </div>
+    </div>
+
+    <!-- MAIN STUDENT WORKS -->
+    <section class="section-padding container" id="capstones">
+        <h2 style="font-size: 1.8rem; color: var(--navy-primary); border-bottom: 2px solid var(--navy-primary); padding-bottom: 8px; display: inline-block;">
+            歷屆優秀畢業專題研究
+        </h2>
+
+        <div class="works-grid">
+            <!-- Work 1 (Relative Path: graph/student_project1.jpg) -->
+            <div class="card-work">
+                <img src="graph/student_project1.jpg" alt="智慧零售專題" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80';">
+                <div class="card-work-content">
+                    <span class="work-tag">智慧新零售與數據營運</span>
+                    <h3>知足咖啡館經營數據分析與動線最適化研究</h3>
+                    <p class="authors">指導教授：林珍如 教授 | 研究團隊：陳同學、林同學、王同學</p>
+                    <p style="font-size: 0.9rem;">運用智慧商店 POS 系統與顧客軌跡分析，改善門市離尖峰營運流程並提升顧客滿意度。</p>
+                </div>
+            </div>
+
+            <!-- Work 2 (Relative Path: graph/student_project2.jpg) -->
+            <div class="card-work">
+                <img src="graph/student_project2.jpg" alt="ESG永續報告" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80';">
+                <div class="card-work-content">
+                    <span class="work-tag">永續 ESG 管理</span>
+                    <h3>東部在地農企碳足跡盤查與永續行銷策略</h3>
+                    <p class="authors">指導教授：張老師 | 研究團隊：李同學、張同學</p>
+                    <p style="font-size: 0.9rem;">協助在地農業企業建立碳排放指標與永續報告書框架，榮獲全國大專院校商業專題競賽優等獎。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESERVED STUDENT VIDEO SECTION (Requirement IV) -->
+        <div class="student-video-box" id="videos">
+            <h3><i class="fa-solid fa-video"></i> 專題發表與成果簡報影音專區</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+                預留之學生專題簡報影音播放空間（使用相對路徑 graph/student_video.mp4 載入）：
+            </p>
+
+            <video controls poster="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80">
+                <source src="graph/student_video.mp4" type="video/mp4">
+                您的瀏覽器不支援 HTML5 影片播放。請確認影片檔案已放置於 graph/student_video.mp4。
+            </video>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 慈濟大學經營管理學系 版權所有 | Student Academic Portfolio</p>
+            <p style="margin-top: 10px;"><a href="index.html" style="color: #38bdf8; font-weight: 500;">← 返回系所介紹首頁 (index.html)</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
